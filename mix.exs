@@ -56,6 +56,7 @@ defmodule Undionline.MixProject do
       {:bamboo, "~> 1.5"},
       {:premailex, "~> 0.3.0"},
       {:floki, ">= 0.0.0"},
+      {:bamboo_gmail, "~> 0.2.0"},
 
       # Waffle for file upload
       {:waffle, "~> 1.1.1"},

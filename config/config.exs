@@ -45,9 +45,13 @@ config :ex_aws,
   secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
   region: System.get_env("AWS_REGION")
 
-config :undionline, Undionline.Mailer,
-  adapter: Bamboo.MandrillAdapter,
-  api_key: "my_api_key"
+  config :undionline, Undionline.Mailer,
+  adapter: Bamboo.GmailAdapter,
+  sub: {:system, "roslan@undionline.com"},
+  sandbox: false
+
+# Google auth credentials must be provided to the `goth` app
+config :goth, json: "elite-impact-308402-976ee090d0a6.json" |> File.read!
 
 config :kaffy,
    otp_app: :undionline,
